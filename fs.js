@@ -22,3 +22,40 @@ fs.readFile("hello.txt", "utf8", (err, data) => {
 })
 
 console.log("end")
+
+// Writing Files
+
+//The Synchronous way:
+fs.writeFileSync("SynchronousFileWriting.txt", "Welcome to Bangladesh!", (err) => {
+    if (err) throw err;
+    console.log("File Created!")
+})
+
+// The normal way:
+fs.writeFile("AsynchronousFileWriting.txt", "You are a programmer!", (err) => {
+    if (err) throw err;
+    console.log("Finished!")
+})
+
+// Adding changes to an existing file
+
+//The Synchronous way:
+fs.appendFileSync("SynchronousFileWriting.txt", "\nThat's a new line!", (err) => {
+    if (err) throw err;
+    console.log("Finished!")
+})
+
+// The normal way:
+fs.appendFile("AsynchronousFileWriting.txt", "\nThat's also a new line from the normal way,", (err) => {
+    if (err) throw err;
+    console.log("Finished!")
+})
+
+//deleting files
+
+//the synchronous way:
+// fs.unlinkSync("hello.txt", (err) => {
+//     if (err) throw err;
+//     console.log("File deleted.")
+// })
+
